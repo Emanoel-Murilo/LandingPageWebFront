@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --clipValor: 0% 10%, 10% 10%, 10% 0%, 90% 0%, 90% 10%, 100% 10%, 100% 90%, 90% 90%, 90% 100%, 10% 100%, 10% 90%, 0% 90%; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "jersey 10";
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    transition: 0.3s;
+    list-style: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    padding: 5px 40px 5px 40px;
+    box-sizing: border-box;
+    background-image: url("assets/images/brick.png");
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+ul > a {
+    width: 120px;
+    height: 60px;
+    font-size: 32px;
+    box-sizing: border-box;
+    background-color: black ;
+    clip-path: polygon(var(--clipValor));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul > a:hover, #btnNav:hover {
+    scale: 1.1;
+    background-color: purple;
+}
+
+#btnNav {
+    display: none;
+    cursor: pointer;
+}
+
+main {
+    padding-top: 80px;
+}
+
+#navResponsivo {
+    display: none;
+    position: fixed;
+    right: 20px;
+    z-index: 1;
+}
+
+/* fim do estilo global e da navbar */
+
+section {
+    height: calc(100vh - 80px);
+}
+
+#sobreSection, #skillsSection{
+    background-color: #242424;
+}
+
+#portfolioSection, #contatoSection {
+    background-color: #333333;
+}
+
+
+@media (max-width: 768px) { 
+
+    .esconder {
+        display: none;
+    }
+    
+    nav > ul {
+        display: block;
+        position: fixed;
+        top: 80px;
+        right: 20px;
+    }
+
+    ul > a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    header{
+        padding: 5px 20px 5px 20px;
+    }
+
+    #btnNav {
+        display: flex;
+        align-self: center;
+        font-size: 32px;
+        background-color: black;
+        padding: 10px 10px 10px 10px;
+        clip-path: polygon(var(--clipValor));
+    }
+
+    #navResponsivo {
+        display: block;
+    }
+}
