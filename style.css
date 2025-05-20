@@ -15,6 +15,12 @@
     list-style: none;
 }
 
+h1 {
+    font-size: 72px;
+    font-family: 'pixelify sans';
+    text-align: center;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -172,6 +178,27 @@ section {
     width: 100px;
 }
 
+/* section portfolio */
+
+#portfolioSection {
+    padding: 50px 50px 0 50px;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+.cardsPort {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardsPort > div {
+    max-width: 400px;
+}
+
+.cardsPort > div > img {
+    width: 100%;
+}
 
 @media (max-width: 768px) { 
 
