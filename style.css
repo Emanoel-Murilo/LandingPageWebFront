@@ -97,12 +97,12 @@ section {
 .fotoeTexto {
     display: flex;
     align-items: center;
-    margin: 100px 50px 0 50px;
+    margin: 50px 50px 0 50px;
     gap: 5vw;
 }
 
 #fotoEu {
-    width: calc(150px + 30vw);
+    width: calc(150px + 25vw);
 }
 .textoSobre {
     text-align: end;
@@ -208,11 +208,10 @@ section {
         display: block;
     }
 
-    /* ection sobre */
+    /* section sobre reponsiva*/
 
     .fotoeTexto {
         flex-direction: column;
-        margin: 100px 25px 0 25px                                                                                                        ;
     }
 
     .textoSobre {
