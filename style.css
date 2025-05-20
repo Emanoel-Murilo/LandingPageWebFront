@@ -26,6 +26,7 @@ header {
     background-size: contain;
     display: flex;
     justify-content: space-between;
+    z-index: 2;    
 }
 
 nav {
@@ -75,7 +76,9 @@ main {
 /* fim do estilo global e da navbar */
 
 section {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+    display: flex;
 }
 
 #sobreSection, #skillsSection{
@@ -84,6 +87,89 @@ section {
 
 #portfolioSection, #contatoSection {
     background-color: #333333;
+}
+
+#sobreSection {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fotoeTexto {
+    display: flex;
+    align-items: center;
+    margin: 100px 50px 0 50px;
+    gap: 5vw;
+}
+
+#fotoEu {
+    width: calc(150px + 30vw);
+}
+.textoSobre {
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.textoSobre > h2 {
+    font-family: 'pixelify sans';
+    font-size: calc(32px + 2vw);
+}
+
+.textoSobre > p {
+    font-size: calc(16px + 1vw);
+}
+
+.redesSociais {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.redesSociais > p {
+    font-size: calc(16px + 1vw);
+    color: #E6BA33;
+    align-self: center;
+    font-family: 'pixelify sans';
+}
+
+.redesSociais > ul {
+    display: flex;
+    gap: 20px;
+}
+
+.redesSociais > ul > a {
+    background-color: #E6BA33;
+    width: 50px;
+    height: 50px;
+}
+
+.redesSociais > ul > a > li > i {
+    color: #242424;
+    font-size: 130%;
+}
+
+/* Tentativa Sonic */
+
+.terrenoSobre {
+    width: 100%;
+    overflow: hidden;
+}
+
+.terrenoSobre > div {
+    width: 100%;
+    height: 80px;
+    background-image: url(assets/images/terraSobre.png);
+}
+
+@keyframes animacaoSonic {
+    0%{margin-left: -150px;}
+    100%{margin-left: calc(100vw + 100px);}
+}
+
+#sonico {
+    animation: animacaoSonic 1s linear infinite;
+    width: 100px;
 }
 
 
@@ -120,5 +206,21 @@ section {
 
     #navResponsivo {
         display: block;
+    }
+
+    /* ection sobre */
+
+    .fotoeTexto {
+        flex-direction: column;
+        margin: 100px 25px 0 25px                                                                                                        ;
+    }
+
+    .textoSobre {
+        text-align: center;
+    }
+
+    .redesSociais {
+        flex-direction: column;
+        align-items: center;
     }
 }
