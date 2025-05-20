@@ -181,7 +181,7 @@ section {
 /* section portfolio */
 
 #portfolioSection {
-    padding: 50px 50px 0 50px;
+    padding: 50px;
     flex-direction: column;
     gap: 50px;
 }
@@ -190,17 +190,36 @@ section {
 .cardsPort {
     display: flex;
     justify-content: space-between;
+    font-size: 1em;
+    gap: 50px;
 }
 
 .cardsPort > div {
-    max-width: 400px;
+    width: calc(200px + 10vw);
 }
 
 .cardsPort > div > img {
     width: 100%;
 }
 
+.cardsPort > div > h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'pixelify sans';
+    font-size: 2em;
+}
+
+.cardsPort > div > p {
+    text-align: center;
+    font-family: 'pixelify sans';
+}
+
+
 @media (max-width: 768px) { 
+
+    h1 {
+    font-size: 48px;
+    }
 
     .esconder {
         display: none;
@@ -239,6 +258,7 @@ section {
 
     .fotoeTexto {
         flex-direction: column;
+        margin: 20px 20px 0 20px;
     }
 
     .textoSobre {
@@ -249,4 +269,17 @@ section {
         flex-direction: column;
         align-items: center;
     }
+
+    /* sectionPort responsivo*/
+
+
+    #portfolioSection {
+    padding: 20px;
+    }
+
+    .cardsPort {
+        align-items: center;
+        flex-direction: column;
+    }
+
 }
