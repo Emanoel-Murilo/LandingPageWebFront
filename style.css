@@ -3,6 +3,7 @@
 :root {
     --clipValor: 0% 10%, 10% 10%, 10% 0%, 90% 0%, 90% 10%, 100% 10%, 100% 90%, 90% 90%, 90% 100%, 10% 100%, 10% 90%, 0% 90%; 
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -214,6 +215,59 @@ section {
     font-family: 'pixelify sans';
 }
 
+/* section skills */
+
+#skillsSection {
+    flex-direction: column;
+    padding: 50px
+}
+
+.cardsSkills {
+    margin:  0 15vw 0 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    flex-grow: 1;
+}
+
+.cardsSkills > div {
+    display: flex;
+}
+
+.skillInfo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 10px;
+}
+
+.textoSkills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textoSkills > p {
+    font-size: 32px;
+}
+
+.barraProgresso {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 5px;  
+}
+
+.barraProgresso > span {
+    height: 100%;
+    display: block;
+}
+
+.imgSkill {
+    width: calc(150px + 1vw);
+}
 
 @media (max-width: 768px) { 
 
@@ -282,4 +336,23 @@ section {
         flex-direction: column;
     }
 
+    /* skills responsivo */
+
+
+    .cardsSkills {
+        margin: 0;
+    }
+
+    .cardsSkills > div {
+        flex-direction: column;
+    }
+
+    .skillInfo {
+        align-self: auto;
+        flex-grow: 1;
+    }
+ 
+    .imgSkill {
+        align-self: center;
+    }
 }
