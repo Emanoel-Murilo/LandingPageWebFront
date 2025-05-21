@@ -240,8 +240,7 @@ section {
     margin:  0 15vw 0 15vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-evenly;
     flex-grow: 1;
 }
 
@@ -320,7 +319,7 @@ form {
     justify-content: space-between;
 }
 
-input {
+input, textarea {
     color: white;
     background-color: rgba(0, 0, 0, 0);
     font-size: 32px;
@@ -329,7 +328,6 @@ input {
 
 #fmensagem {
     height: 50%;
-    text-align: left;
 }
 
 @media (max-width: 768px) { 
