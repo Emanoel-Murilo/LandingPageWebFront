@@ -449,4 +449,8 @@ label {
     .cardsContatos {
     gap: 50px;
     }
+
+    footer > p {
+        font-size: calc(10px + 1vw);
+    }
 }
