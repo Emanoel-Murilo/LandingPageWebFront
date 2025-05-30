@@ -216,16 +216,37 @@ section {
     justify-content: center;
 }
 
-.col > div {
+.col > a {
+    cursor: pointer;
     width: calc(200px + 10vw);
     height: calc(50px + 5vw);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10%;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
-.col > div > p {
+.col > a:hover {
+    box-shadow: inset 0 0 20px black; 
+    border: 2px solid white;
+    scale: 1.1;
+}
+
+.btnPortRed {
+    background-color: #e34552;
+}
+.btnPortBlue {
+    background-color: #006ab3
+}
+.btnPortGreen {
+    background-color: #0ba17f;
+}
+.btnPortYellow {
+    background-color: #ffbc58;
+}
+
+.col > a > p {
     text-align: center;
     font-size: calc(18px + 1vw);
     text-shadow: 1px 2px 5px #242424;
@@ -428,7 +449,7 @@ label {
         flex-wrap: wrap;
     }
 
-    .cardsPort > div {
+    .cardsPort > .col {
         flex-direction: column;
     }
 
