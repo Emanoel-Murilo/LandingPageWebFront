@@ -203,30 +203,25 @@ section {
 
 
 .cardsPort {
+}
+
+.cardsPort > .col {
     display: flex;
     justify-content: space-between;
-    font-size: 1em;
-    gap: 50px;
 }
 
-.cardsPort > div {
-    width: calc(200px + 10vw);
+.col > div {
+    width: calc(100px + 10vw);
+    height: calc(50px + 10vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.cardsPort > div > img {
-    width: 100%;
-}
-
-.cardsPort > div > h2 {
+.col > div > p {
+    font-size: calc(16px + 1vw);
     text-align: center;
-    margin-top: 10px;
-    font-family: 'pixelify sans';
-    font-size: 2em;
-}
-
-.cardsPort > div > p {
-    text-align: center;
-    font-family: 'pixelify sans';
+    vertical-align: center;
 }
 
 /* section skills */
