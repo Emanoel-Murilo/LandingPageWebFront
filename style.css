@@ -204,29 +204,61 @@ section {
 
 .cardsPort {
     display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-    gap: 50px;
+    flex-direction: column;
+    gap: calc(10px + 2vw);
+    justify-content: center;
+    flex-grow: 1;
 }
 
-.cardsPort > div {
+.cardsPort > .col {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.col > a {
+    cursor: pointer;
     width: calc(200px + 10vw);
+    height: calc(50px + 5vw);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
-.cardsPort > div > img {
-    width: 100%;
+.col > a:hover {
+    box-shadow: inset 0 0 20px black; 
+    border: 2px solid white;
+    scale: 1.1;
 }
 
-.cardsPort > div > h2 {
+.btnPortRed {
+    background-color: #e34552;
+}
+.btnPortBlue {
+    background-color: #006ab3
+}
+.btnPortGreen {
+    background-color: #0ba17f;
+}
+.btnPortYellow {
+    background-color: #ffbc58;
+}
+
+.col > a > p {
     text-align: center;
-    margin-top: 10px;
-    font-family: 'pixelify sans';
-    font-size: 2em;
+    font-size: calc(18px + 1vw);
+    text-shadow: 1px 2px 5px #242424;
 }
 
-.cardsPort > div > p {
-    text-align: center;
-    font-family: 'pixelify sans';
+.kongs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.kongs img {
+    width: calc(100px + 5vw);
 }
 
 /* section skills */
@@ -413,7 +445,11 @@ label {
     }
 
     .cardsPort {
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cardsPort > .col {
         flex-direction: column;
     }
 
